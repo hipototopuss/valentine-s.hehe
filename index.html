@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? </title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            color: #ff3366;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .yes-btn {
+            background-color: #ff6699;
+            color: white;
+        }
+        .no-btn {
+            background-color: #ffcccc;
+            color: black;
+        }
+        .character {
+            width: 150px;
+            height: 150px;
+            background-image: url('IMG_20250214_160025_131~2.jpg'); /* Cute animated character */
+            background-size: cover;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Will You Be My Valentine?–</h1>
+        <div class="character"></div>
+        <div class="buttons">
+            <button class="yes-btn" onclick="sayYes()">YES</button>
+            <button class="no-btn" onclick="sayNo()">NO</button>
+        </div>
+    </div>
+
+    <script>
+        let yesButton = document.querySelector(".yes-btn");
+        let noButton = document.querySelector(".no-btn");
+        let size = 20; // Initial font size for Yes button
+
+        function sayNo() {
+            size += 10; // Increase Yes button size
+            yesButton.style.fontSize = size + "px";
+        }
+
+        function sayYes() {
+            window.location.href = "thankyou.html"; // Redirect to thank you page
+        }
+    </script>
+
+</body>
+</html>
